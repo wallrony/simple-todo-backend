@@ -1,8 +1,17 @@
-# NodeJS Backend Template
+# NodeJS TODO
 
 Autor: Wallisson Rony de M. N.
 
-Este é um repositório que contém arquivos que eu normalmente utilizo para construção de backends com NodeJS, Knex e Typescript. Esse também foi configurado como um template e disponibilizado como público. Utilize o quanto quiser :D.
+Este é um projeto feito em NodeJS com o intuito de prover um CRUD de atividades (TODO).
+
+## Como Utilizar
+
+Para executar esse projeto você vai precisar um gerenciador de pacotes de aplicações Node instalado, como o `npm` ou `yarn`. Esse projeto foi desenvolvido utilizando o `yarn` na versão 1.22.5, logo, recomendo que utilize o mesmo para evitar erros ou, caso tenha conhecimentos sobre versionamento e queira utilizar o `npm`, verifique a compatibilidade e utilize. Para executar o projeto de forma local, após baixá-lo, você precisa seguir os passos abaixo estando dentro da pasta:
+
+- Crie o arquivo .env seguindo a estrutura do arquivo .env.example para que a conexão com o banco de dados suceda normalmente.
+- Instale os pacotes do projeto com o comando `npm intall` ou `yarn`;
+
+Agora o projeto está pronto para ser executado :).
 
 ## Pacotes Presentes neste Repositório.
 
@@ -13,13 +22,11 @@ Este é um repositório que contém arquivos que eu normalmente utilizo para con
  - crypto
  - dotenv-safe
  - knex *
- - pg *
+ - pg
  - jsonwebtoken
  - typescript
 
 *: pacotes que têm um * na frente indicam versionamento específico por causarem problemas em versões mais recentes ou informações mais detalhadas a serem explicadas a seguir.
-
-pg *: após pesquisas, descobri que existe um erro com o pacote pg (postgresql) na versão mais atual até então (10/10/2020) na utilização do SSL. Como utilizo ferramentas de teste como o heroku, que necessita de SSL para conexão com banco de dados, resolvi instalar uma versão mais estável do pg para funcionamento do backend. Por isso, ao utilizar operações com o pg no seu projeto, você poderá ver mensagens que depreciação na utilização do SSL, porém, isso não impacta no desenvolvimento e na experiência de utilização do seu backend ou banco de dados.
 
 knex *: por padrão, nesse projeto, foi inserida a configuração de client do knex para utilizar PostgreSQL. Então, basta inserir as credenciais apresentadas no arquivo 'knexfile.ts' em um arquivo .env.
 
